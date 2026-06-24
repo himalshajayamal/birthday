@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Boo 🐻 | A Night Under the Stars</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <base target="_blank">  ← REMOVED to fix internal links -->
+</head>
+<body>
+
+    <!-- ============================================
+         PHOTOREALISTIC CANVAS BACKGROUND
+         ============================================ -->
+    <canvas id="skyCanvas"></canvas>
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav id="navbar">
+        <a href="#" class="nav-logo">Boo 🐻</a>
+        <ul class="nav-links">
+            <li><a href="#letter">Letter</a></li>
+            <li><a href="#memories">Memories</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#game">Stars</a></li>
+            <li><a href="#puzzle">Puzzle</a></li>
+            <li><a href="#timeline">Journey</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-image-container">
+            <!-- ★ YOUR PHOTO: assets/images/hero/boo-main.jpg -->
+            <img
+                src="assets/images/hero/boo-main.jpg"
+                alt="Boo"
+                class="hero-image"
+                id="heroImage"
+            >
+            <div class="hero-image-ring"></div>
+        </div>
+        <h1 class="hero-title" id="heroTitle">Happy Birthday, Boo 🐻</h1>
+        <p class="subtitle" id="heroSubtitle">To the girl who taught me that some connections transcend time...</p>
+        <div class="date-badge" data-aos="zoom-in" data-aos-delay="1000">🎂 June 25, 2002 🎂</div>
+
+        <div class="counter-section">
+            <div class="counter-box" data-aos="flip-up" data-aos-delay="200">
+                <div class="counter-number" id="ageCounter">0</div>
+                <div class="counter-label">Years Young</div>
+            </div>
+            <div class="counter-box" data-aos="flip-up" data-aos-delay="400">
+                <div class="counter-number" id="daysCounter">0</div>
+                <div class="counter-label">Days Since We Met</div>
+            </div>
+            <div class="counter-box" data-aos="flip-up" data-aos-delay="600">
+                <div class="counter-number">∞</div>
+                <div class="counter-label">Memories</div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+            <span></span><span></span><span></span>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LETTER SECTION
+         ============================================ -->
+    <section id="letter" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">A Letter to the Stars</h2>
+        <p class="section-subtitle" data-aos="fade-up">Some things are better said under the night sky...</p>
+
+        <div class="letter-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="letter-content" id="letterContent">
+                <p>My dearest <span class="highlight">Boo 🐻</span>,</p>
+
+                <p>As I sit beneath the night sky tonight, looking up at the same moon that shines over both of us, I find myself thinking about how strange and beautiful life can be. Four years of memories. Six months of silence. And somehow, despite all that distance, there are still moments when I feel connected to you in ways I can't explain. Maybe it's just my heart refusing to forget. Maybe it's coincidence. Or maybe some people leave footprints on our souls that time simply cannot erase.</p>
+
+                <p>I often think about how easily we assume certain people will always be there. We move through life believing there will always be another conversation, another laugh, another ordinary day together. I never realized how much of my world quietly included you until one day that world became a little quieter.</p>
+
+                <p>You were never just another person in my story, Boo. You became part of it — part of my happiest memories, part of my growth, part of the person I am today.</p>
+
+                <p>Even now, after everything, when I think of you, I don't think about the ending first. I think about your smile. I think about the laughter. I think about the countless little moments that seemed ordinary at the time but became priceless later. I think about how lucky I was to know you.</p>
+
+                <p>You once brought color into days that would have otherwise been forgettable. You made simple moments feel special. You made life feel lighter.</p>
+
+                <p>And if there is one thing I want you to know on your birthday, it is this: even though we are no longer walking the same path, I have never stopped wishing the best for you. I hope your dreams come true. I hope your studies take you exactly where you want to go. I hope you find success, peace, and happiness in every chapter that follows.</p>
+
+                <p>And no matter how much time passes, no matter where life takes us, I want you to remember something — <span class="highlight">you can always count on me.</span></p>
+
+                <p>Not because I expect anything in return. Not because I'm asking for the past back. But because caring about you was never something I could simply switch off.</p>
+
+                <p>If one day life becomes heavy, if one day you need someone to listen, if one day you feel lost, or if one day you simply want to talk — my door will always be open for you. My messages will always be open for you. There will always be a place where your name is welcomed with a smile.</p>
+
+                <p><span class="highlight">You will always matter to me.</span></p>
+
+                <p>Maybe life had different plans for us. Maybe the universe is still writing the rest of the story. I don't know what tomorrow holds. But I do know this: <span class="highlight">meeting you changed me.</span> And no matter what happens next, I will always be grateful that, for a while, our stars shared the same sky.</p>
+
+                <p>Before I end this letter, there is one last thing I want you to know. No matter what tomorrow brings, I hope you never feel alone. Life will give you victories to celebrate and battles you never expected to fight. There will be days when everything makes sense and days when nothing does. There will be moments when the road ahead feels clear and moments when the darkness seems endless.</p>
+
+                <p>Through all of that, I hope you remember how strong you are. I hope you continue chasing your dreams with the same determination that has always made you special. I hope the future gives you opportunities bigger than anything you have imagined. I hope you build a life that makes you genuinely happy.</p>
+
+                <p>And if one day our paths never cross again, that's okay too. Because loving someone doesn't always mean holding on to them. Sometimes it means wanting the best for them, no matter where life takes them.</p>
+
+                <p>You will always have a place in my memories. A place that time cannot erase. A place that distance cannot reach. A place that belongs only to you.</p>
+
+                <p>Years from now, when I look back at my life, your name will still be among the memories that make me smile. And if, with time, the memories of me become distant for you, that is okay. If life becomes beautiful enough that you no longer need to look back, that is okay. If your future becomes so bright that I become only a small chapter in your story, that is okay too.</p>
+
+                <p>Because what matters most to me is that you are happy. Truly happy. I want you to have the future you dream about. I want you to achieve everything you have worked so hard for. I want you to become the incredible engineer, the incredible woman, and the incredible person I always knew you could be.</p>
+
+                <p>And wherever life takes you, I hope you never forget that there will always be someone cheering for you from afar. Someone who believes in you. Someone who is proud of you. Someone who will always be grateful that you existed in his life.</p>
+
+                <p>So walk toward the future without fear. Dream boldly. Love deeply. Live fully.</p>
+
+                <p>And whenever you look up at the night sky, know that somewhere beneath those same stars, there is someone wishing you happiness, success, peace, and every beautiful thing this world can offer.</p>
+
+                <p class="letter-big-wish">Wish you a <span class="highlight">Happy Birthday</span>, <span class="highlight">Boo</span> 🐻</p>
+
+                <p>May tonight's stars shine a little brighter for you. May your future be brighter than the stars above us. And may every dream you carry in your heart find its way home.</p>
+
+                <p>With all my love, respect, gratitude, and warmest wishes,<br>Your Forever Stargazer 🌙✨</p>
+            </div>
+            <div class="letter-signature">Your Forever Stargazer 🌟</div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         QUOTE SECTION
+         ============================================ -->
+    <section class="quote-section" data-aos="fade-in">
+        <div class="quote-text" id="quoteText">We are all in the gutter, but some of us are looking at the stars.</div>
+        <div class="quote-author" id="quoteAuthor">— Oscar Wilde</div>
+    </section>
+
+    <!-- ============================================
+         MEMORIES SECTION
+         ============================================ -->
+    <section id="memories" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Golden Memories</h2>
+        <p class="section-subtitle" data-aos="fade-up">Click on each card to reveal a special memory...</p>
+
+        <div class="scrapbook-grid">
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="100" onclick="revealMemory(this)">
+                <span class="memory-icon">🎡</span>
+                <h3>The Day of the Class Cards</h3>
+                <p class="memory-text" style="display:none;">Remember when we first went to collect our class cards? It was such a simple day, yet somehow it became one of my favourite memories. The weather was a little rainy, and we walked together under your umbrella. It wasn't a grand adventure, but I remember feeling genuinely happy just being there with you. As we walked between classes, talking about our dreams and everything we hoped to achieve one day, the future felt exciting and endless. Looking back now, that ordinary day became one of those memories I'll always carry with me.</p>
+                <p class="memory-preview">That time at the class cards...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="200" onclick="revealMemory(this)">
+                <span class="memory-icon">🌙</span>
+                <h3>The Night Sky</h3>
+                <p class="memory-text" style="display:none;">We both dreamed of a long, happy future and a life filled with beautiful moments. Life took us on a different path than the one we once imagined, but some things never changed. You always loved the night sky. The way you'd look at the moon, the stars, and the endless darkness beyond them made me see them differently too. I think that's when I started loving the night sky—not because of the stars themselves, but because of the wonder and happiness I saw in your eyes whenever you looked up at them.</p>
+                <p class="memory-preview">Under the night sky...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="300" onclick="revealMemory(this)">
+                <span class="memory-icon">🐻</span>
+                <h3>Why "Boo"?</h3>
+                <p class="memory-text" style="display:none;">I called you "Boo" because you were my little bear—warm, comforting, and somehow always managing to steal a piece of my heart without even trying. Every day with you brought something unexpected: a laugh, a memory, a conversation, or a moment that made life brighter. That's why the name always felt perfect. You were never just Boo 🐻 to me—you were one of the most beautiful surprises life ever gave me.</p>
+                <p class="memory-preview">The story behind the nickname...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="400" onclick="revealMemory(this)">
+                <span class="memory-icon">📚</span>
+                <h3>The Engineering Genius</h3>
+                <p class="memory-text" style="display:none;">Watching you dive into electrical and telecommunication engineering was like watching someone discover their superpower. The way your mind worked through complex problems, the late-night study sessions — you were (and are) absolutely brilliant, Boo.</p>
+                <p class="memory-preview">Your academic journey...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="500" onclick="revealMemory(this)">
+                <span class="memory-icon">💙</span>
+                <h3>The Color Blue</h3>
+                <p class="memory-text" style="display:none;">Your favorite color was blue — the color of the sky you loved, the color of calm, the color of depth. I started noticing blue everywhere after you. Blue skies reminded me of your smile. Blue oceans reminded me of your depth.</p>
+                <p class="memory-preview">Your favorite color...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+            <div class="memory-card" data-aos="fade-up" data-aos-delay="600" onclick="revealMemory(this)">
+                <span class="memory-icon">✨</span>
+                <h3>The Cosmic Connection</h3>
+                <p class="memory-text" style="display:none;">Even now, when you're thinking of me, I feel it. Those chichis, that sudden chill, that inexplicable knowing. Science might call it coincidence, but I call it magic. Some connections don't need words or proximity — they just ARE.</p>
+                <p class="memory-preview">Our unspoken bond...</p>
+                <span class="memory-date">Click to reveal</span>
+            </div>
+        </div> <!-- ← ADDED missing closing div for scrapbook-grid -->
+    </section>
+
+    <!-- ============================================
+         QUIZ SECTION
+         ============================================ -->
+    <section id="quiz" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">How Well Do You Know Boo? 🐻</h2>
+        <p class="section-subtitle" data-aos="fade-up">Test your knowledge about the birthday girl!</p>
+        <div class="quiz-container" data-aos="zoom-in" data-aos-duration="800">
+            <div class="quiz-progress" id="quizProgress"></div>
+            <div id="quizContent"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GAME 1 — CATCH THE FALLING STARS
+         ============================================ -->
+    <section id="game" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Catch the Falling Stars ⭐</h2>
+        <p class="section-subtitle" data-aos="fade-up">Click on the falling stars to collect them for Boo!</p>
+        <div class="game-container" data-aos="zoom-in" data-aos-duration="800">
+            <div class="game-score">Score: <span id="gameScore">0</span></div>
+            <div class="game-area" id="gameArea"></div>
+            <button class="game-btn" id="startGameBtn" onclick="startGame()">Start Game</button>
+            <p style="color:#a8b8cc;margin-top:15px;font-size:0.9rem;">Collect as many stars as you can in 30 seconds!</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GAME 2 — BIRTHDAY PHOTO PUZZLE
+         ============================================ -->
+    <section id="puzzle" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Unlock Boo's Photo 🧩</h2>
+        <p class="section-subtitle" data-aos="fade-up">Solve the sliding puzzle to reveal a special memory!</p>
+        <div class="puzzle-wrapper" data-aos="zoom-in" data-aos-duration="800">
+            <div class="puzzle-header">
+                <div class="puzzle-stat">Moves: <span id="puzzleMoves">0</span></div>
+                <div class="puzzle-stat">Best: <span id="puzzleBest">—</span></div>
+                <button class="game-btn" id="puzzleShuffleBtn" onclick="shufflePuzzle()">Shuffle & Play</button>
+            </div>
+            <div class="puzzle-board" id="puzzleBoard"></div>
+            <div class="puzzle-controls">
+                <button class="game-btn-outline" onclick="solvePuzzle()">Peek at Answer</button>
+                <select class="puzzle-select" id="puzzleImageSelect" onchange="changePuzzleImage()">
+                    <option value="gallery-01.jpg">Memory 1</option>
+                    <option value="gallery-02.jpg">Memory 2</option>
+                    <option value="gallery-03.jpg">Memory 3</option>
+                    <option value="gallery-04.jpg">Memory 4</option>
+                    <option value="gallery-05.jpg">Memory 5</option>
+                    <option value="gallery-06.jpg">Memory 6</option>
+                </select>
+            </div>
+            <p class="puzzle-tip">💡 Tap/click tiles next to the empty space to slide them. Arrange all 8 tiles in order!</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FUN FACTS / ROASTS SECTION
+         ============================================ -->
+    <section id="roasts" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Fun Facts &amp; Gentle Roasts 😄</h2>
+        <p class="section-subtitle" data-aos="fade-up">Because what's a birthday without some friendly teasing?</p>
+        <div class="roast-container">
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="emoji">🍭</span>
+                <h4>The Cotton Candy Obsession</h4>
+                <p>Boo's love for cotton candy is so intense that she could probably power a small city with her sugar rush. If cotton candy were a currency, she'd be a billionaire by now.</p>
+            </div>
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="emoji">🔌</span>
+                <h4>The Engineer in Her</h4>
+                <p>She's studying electrical engineering, which means she can probably fix your WiFi but will still ask you to kill the spider in the bathroom. Priorities, people.</p>
+            </div>
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="300">
+                <span class="emoji">🌙</span>
+                <h4>The Night Owl</h4>
+                <p>Boo loves the night sky so much that she basically has a personal relationship with the moon. The moon is probably tired of her late-night texts by now.</p>
+            </div>
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="400">
+                <span class="emoji">🐻</span>
+                <h4>The Bear Nickname</h4>
+                <p>She's called Boo because she's as cuddly as a teddy bear. But let's be real — she's more like a bear who hibernates during exams and emerges only for cotton candy.</p>
+            </div>
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="500">
+                <span class="emoji">💙</span>
+                <h4>Blue Everything</h4>
+                <p>Her favorite color is blue, which is convenient because that's also the color she turns when she realizes she has an assignment due in 2 hours.</p>
+            </div>
+            <div class="roast-card" data-aos="fade-up" data-aos-delay="600">
+                <span class="emoji">✨</span>
+                <h4>The Cosmic Connection</h4>
+                <p>She believes in past-life connections, which explains why she keeps "accidentally" finishing your sentences. It's not creepy, it's cosmic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TIMELINE SECTION
+         ============================================ -->
+    <section id="timeline" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Our Journey Through Time</h2>
+        <p class="section-subtitle" data-aos="fade-up">A timeline of moments that shaped us...</p>
+        <div class="timeline">
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>The Beginning</h4>
+                    <p>The first day of A/L classes. Two strangers walking into the same chapter of life without knowing what the future had planned. It started with simple conversations, shared classes, and ordinary moments. Looking back now, it's amazing how a single day can quietly change the course of someone's life forever.</p>
+                    <span class="timeline-date">2019</span>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>The Day of the Class Cards</h4>
+                    <p>One slightly rainy day, we went together to collect our class cards. Walking under your umbrella between classes, talking about our dreams, our goals, and the future we hoped to build, everything felt exciting and full of possibility. It wasn't a grand adventure, but somehow it became one of the memories I treasure most.</p>
+                    <span class="timeline-date">A Beautiful Memory</span>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>The Night Sky</h4>
+                    <p>We never needed to sit together beneath the stars to share our love for the night sky. Even from different places, we would look up at the same moon and the same endless universe above us. You loved the night sky so much that, somewhere along the way, I started loving it too—not because of the stars themselves but because they always reminded me of you.</p>
+                    <span class="timeline-date">Countless Nights</span>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>The Engineering Journey</h4>
+                    <p>Watching Boo pursue her passion for electrical and telecommunication engineering at HND Galle. Her brilliance shining brighter every day.</p>
+                    <span class="timeline-date">Ongoing</span>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>The Separation</h4>
+                    <p>Two months ago, our paths took different directions. Sometimes life writes chapters we never expected, and sometimes love means respecting the journey someone needs to take. Distance may have changed many things, but gratitude for the memories remains unchanged.</p>
+                    <span class="timeline-date">2 Months Ago</span>
+                </div>
+            </div>
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>Today—Her Birthday!</h4>
+                    <p>June 25, 2026. Another year around the sun for the girl who made my world brighter. Happy Birthday, Boo 🐻. It's your special day.</p>
+                    <span class="timeline-date">June 25, 2026</span>
+                </div>
+            </div>
+        </div>
+    </section> <!-- ← TIMELINE CLOSED HERE -->
+
+    <!-- ============================================
+         HAPPY BIRTHDAY VIDEO SECTION (now outside timeline)
+         ============================================ -->
+    <section id="video" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">A Special Message 🎬</h2>
+        <p class="section-subtitle" data-aos="fade-up">Press play and feel every moment...</p>
+
+        <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="video-frame">
+                <video
+                    id="birthdayVideo"
+                    class="birthday-video"
+                    controls
+                    preload="metadata"
+                    poster="assets/images/hero/video-thumbnail.jpg"
+                >
+                    <source src="assets/videos/happy-birthday.mp4" type="video/mp4">
+                    <source src="assets/videos/happy-birthday.webm" type="video/webm">
+                    Your browser does not support HTML5 video.
+                </video>
+                <!-- Fallback shown if video file is missing -->
+                <div id="videoFallback" class="video-fallback" style="display:none;">
+                    <div class="video-fallback-inner">
+                        <div class="video-fallback-icon">🎬</div>
+                        <p>Place your video at</p>
+                        <code>assets/videos/happy-birthday.mp4</code>
+                        <p>and it will play right here.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-caption" data-aos="fade-up" data-aos-delay="300">
+                <p>Made with every ounce of love, for the girl who deserves the whole universe. 🌌</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY SECTION
+         ============================================ -->
+    <section id="gallery" class="section-padding">
+        <h2 class="section-title" data-aos="fade-down">Moments in Frames</h2>
+        <p class="section-subtitle" data-aos="fade-up">Visual memories of our journey together...</p>
+
+        <div class="carousel-container">
+            <div class="carousel" id="galleryCarousel">
+                <div class="carousel-card" onclick="rotateGallery(0)">
+                    <img src="assets/images/gallery/gallery-01.jpg" alt="Memory 1" loading="lazy">
+                    <div class="gallery-caption">The night sky you loved so much</div>
+                </div>
+                <div class="carousel-card" onclick="rotateGallery(1)">
+                    <img src="assets/images/gallery/gallery-02.jpg" alt="Memory 2" loading="lazy">
+                    <div class="gallery-caption">That smile that changed everything</div>
+                </div>
+                <div class="carousel-card" onclick="rotateGallery(2)">
+                    <img src="assets/images/gallery/gallery-03.jpg" alt="Memory 3" loading="lazy">
+                    <div class="gallery-caption">Carnival lights and cotton candy dreams</div>
+                </div>
+                <div class="carousel-card" onclick="rotateGallery(3)">
+                    <img src="assets/images/gallery/gallery-04.jpg" alt="Memory 4" loading="lazy">
+                    <div class="gallery-caption">Under the same stars, always</div>
+                </div>
+                <div class="carousel-card" onclick="rotateGallery(4)">
+                    <img src="assets/images/gallery/gallery-05.jpg" alt="Memory 5" loading="lazy">
+                    <div class="gallery-caption">Two souls, one journey</div>
+                </div>
+                <div class="carousel-card" onclick="rotateGallery(5)">
+                    <img src="assets/images/gallery/gallery-06.jpg" alt="Memory 6" loading="lazy">
+                    <div class="gallery-caption">Across galaxies, our connection remains</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-nav">
+            <button class="gallery-nav-btn" onclick="prevGallery()">◀</button>
+            <button class="gallery-nav-btn" onclick="nextGallery()">▶</button>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer data-aos="fade-up">
+        <h2>Happy Birthday, Boo 🐻</h2>
+        <p>"I didn't realize how crucial you were to my life before suddenly it vanished. But some things, like stars, remain visible even in the darkest nights."</p>
+        <div class="footer-heart">💙</div>
+
+        <div class="special-note">
+            <p class="special-note-text">I saw you suffering earlier, but I didn't reach out because I didn't want to add to your stress. But please remember — when you feel like no one understands you, when the world feels too heavy, when you feel completely alone... I was there with you, and I still am. You don't have to carry everything by yourself.</p>
+            <a href="https://wa.me/qr/OEXDJSTK2RJ3G1" class="whatsapp-btn" target="_blank" rel="noopener">💬 Click here if you need someone</a>
+        </div>
+
+        <p style="margin-top:30px;font-size:1rem;color:#7a8fa8;">Made with stardust, memories, and a little bit of code.<br>For Dewmini Savindi Katawala — forever Boo 🐻</p>
+        <div style="margin-top:30px;">
+            <button class="btn-special btn-gold" onclick="triggerCandyRain()">🍭 Make It Rain Cotton Candy!</button>
+            <button class="btn-special" onclick="triggerConfetti()">🎉 Birthday Confetti!</button>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         MUSIC PLAYER
+         ============================================ -->
+    <div class="music-player" onclick="toggleMusic()">
+        <span class="music-icon" id="musicIcon">🎵</span>
+        <span class="music-text" id="musicText">Our Song</span>
+    </div>
+
+    <audio id="bgMusic" loop style="display:none;">
+        <source src="assets/audio/our-song.mp3" type="audio/mpeg">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- EFFECT CONTAINERS -->
+    <div class="candy-container" id="candyContainer"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" style="display:none;" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" alt="">
+        <p id="lightboxCaption"></p>
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    </div>
+
+    <!-- ============================================
+         SCRIPTS
+         ============================================ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
