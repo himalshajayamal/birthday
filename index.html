@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     <title>Happy Birthday Boo 🐻 | A Night Under the Stars</title>
 
     <!-- Google Fonts -->
@@ -1555,6 +1555,127 @@
             }
         }
 
+
+
+        /* ============================================================
+           MOBILE HARDENING & TOUCH FIXES
+           ============================================================ */
+        html {
+            scroll-padding-top: calc(74px + env(safe-area-inset-top));
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+
+        body {
+            width: 100%;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        body.nav-open {
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        button,
+        select,
+        .hamburger,
+        .memory-card,
+        .quiz-option,
+        .game-star,
+        .puzzle-tile,
+        .carousel-card,
+        .gallery-nav-btn,
+        .music-player,
+        .btn-special,
+        .whatsapp-btn {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        button,
+        select,
+        .hamburger,
+        .gallery-nav-btn,
+        .music-player {
+            min-height: 44px;
+        }
+
+        .hamburger {
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .hamburger:focus-visible,
+        button:focus-visible,
+        select:focus-visible,
+        a:focus-visible,
+        .quiz-option:focus-visible,
+        .puzzle-tile:focus-visible {
+            outline: 2px solid rgba(245, 200, 66, 0.85);
+            outline-offset: 3px;
+        }
+
+        .hero {
+            min-height: 100svh;
+        }
+
+        @supports (min-height: 100dvh) {
+            .hero {
+                min-height: 100dvh;
+            }
+        }
+
+        .section-padding,
+        footer,
+        .quote-section {
+            overflow-x: hidden;
+            overflow-x: clip;
+        }
+
+        .game-area,
+        .puzzle-board,
+        .carousel-container,
+        .video-frame {
+            transform: translateZ(0);
+        }
+
+        .birthday-video {
+            background: #000;
+        }
+
+        @media (hover: none), (pointer: coarse) {
+            .counter-box:hover,
+            .memory-card:hover,
+            .roast-card:hover,
+            .btn-special:hover,
+            .game-btn:hover,
+            .game-btn-outline:hover,
+            .whatsapp-btn:hover,
+            .music-player:hover {
+                transform: none;
+                box-shadow: inherit;
+            }
+
+            .puzzle-tile:hover:not(.empty),
+            .game-star:hover,
+            .carousel-card:hover img {
+                transform: none;
+            }
+
+            .carousel-card .gallery-caption {
+                transform: translateY(0);
+            }
+        }
+
         /* ============================================================
            RESPONSIVE BREAKPOINTS
            ============================================================ */
@@ -1955,6 +2076,166 @@
             }
         }
 
+
+
+        /* --- Phone-first polish overrides --- */
+        @media (max-width: 768px) {
+            nav {
+                padding: calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 10px calc(14px + env(safe-area-inset-left));
+            }
+
+            .nav-links {
+                max-height: calc(100svh - 64px - env(safe-area-inset-top));
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .hero {
+                min-height: 100svh;
+                padding-top: calc(82px + env(safe-area-inset-top));
+                padding-bottom: 54px;
+            }
+
+            @supports (min-height: 100dvh) {
+                .hero {
+                    min-height: 100dvh;
+                }
+            }
+
+            .hero-image {
+                width: clamp(132px, 43vw, 180px);
+                height: clamp(132px, 43vw, 180px);
+            }
+
+            .hero-image-ring {
+                top: -7px;
+                left: -7px;
+                width: calc(100% + 14px);
+                height: calc(100% + 14px);
+            }
+
+            .counter-section {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 8px;
+            }
+
+            .counter-box {
+                min-width: 0;
+                width: 100%;
+            }
+
+            .letter-content p {
+                text-indent: 0;
+            }
+
+            .game-btn,
+            .game-btn-outline,
+            .btn-special,
+            .whatsapp-btn {
+                min-height: 44px;
+            }
+
+            .puzzle-header,
+            .puzzle-controls {
+                width: 100%;
+            }
+
+            .puzzle-header .game-btn,
+            .puzzle-controls .game-btn-outline,
+            .puzzle-select {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .puzzle-board {
+                width: min(86vw, 300px);
+                height: min(86vw, 300px);
+                gap: 3px;
+            }
+
+            .puzzle-tile {
+                transition: transform 0.08s, box-shadow 0.08s;
+            }
+
+            .video-frame {
+                border-radius: 16px;
+            }
+
+            .birthday-video {
+                object-fit: contain;
+                border-radius: 16px;
+            }
+
+            .carousel-container {
+                width: min(100%, 420px);
+                height: clamp(250px, 43vh, 330px);
+                touch-action: pan-y;
+            }
+
+            .carousel-card {
+                border-radius: 16px;
+            }
+
+            .carousel-card .gallery-caption {
+                padding-bottom: 12px;
+            }
+
+            .music-player {
+                bottom: calc(12px + env(safe-area-inset-bottom));
+                right: calc(12px + env(safe-area-inset-right));
+            }
+
+            .lightbox {
+                padding: calc(16px + env(safe-area-inset-top)) 14px calc(16px + env(safe-area-inset-bottom));
+            }
+        }
+
+        @media (max-width: 360px) {
+            .counter-section {
+                grid-template-columns: 1fr;
+                max-width: 220px;
+            }
+
+            .hero .date-badge {
+                white-space: normal;
+            }
+
+            .puzzle-board {
+                width: min(88vw, 276px);
+                height: min(88vw, 276px);
+            }
+
+            .music-text {
+                display: none;
+            }
+
+            .music-player {
+                width: 46px;
+                height: 46px;
+                padding: 0;
+                justify-content: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
         /* ============================================================
            UTILITY – ensure all animated sections are visible
            ============================================================ */
@@ -2313,7 +2594,7 @@
 
         <div class="video-wrapper" data-aos="zoom-in" data-aos-duration="1000">
             <div class="video-frame">
-                <video id="birthdayVideo" class="birthday-video" controls preload="metadata" poster="assets/images/hero/video-thumbnail.jpg">
+                <video id="birthdayVideo" class="birthday-video" controls preload="metadata" playsinline webkit-playsinline poster="assets/images/hero/video-thumbnail.jpg">
                     <source src="assets/videos/happy-birthday.mp4" type="video/mp4" />
                     <source src="assets/videos/happy-birthday.webm" type="video/webm" />
                     Your browser does not support HTML5 video.
@@ -2445,9 +2726,15 @@
                 canvas.height = window.innerHeight;
             }
             resize();
-            window.addEventListener('resize', function() { resize(); });
+            var skyResizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(skyResizeTimer);
+                skyResizeTimer = setTimeout(resize, 120);
+            }, { passive: true });
 
-            var starCount = 1800;
+            var isSmallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+            var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var starCount = reduceMotion ? 220 : (isSmallScreen ? 650 : 1800);
             var stars = [];
             for (var i = 0; i < starCount; i++) {
                 var mag = Math.pow(Math.random(), 2.5);
@@ -2658,7 +2945,7 @@
                 drawStars(w, h);
                 drawMoon(w, h);
                 drawHorizonGlow(w, h);
-                requestAnimationFrame(frame);
+                if (!reduceMotion) requestAnimationFrame(frame);
             }
             frame();
         }
@@ -2668,7 +2955,7 @@
         // ============================================================
         function initAOS() {
             if (typeof AOS === 'undefined') return;
-            AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 100 });
+            AOS.init({ duration: window.innerWidth <= 768 ? 550 : 800, easing: 'ease-in-out', once: true, offset: window.innerWidth <= 768 ? 45 : 100, disable: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches });
         }
 
         // ============================================================
@@ -2926,7 +3213,8 @@
                 btn.disabled = true; }
             if (area) area.innerHTML = '';
 
-            starInterval = setInterval(function() { if (gameActive) spawnStar(); }, 600);
+            var spawnDelay = window.innerWidth <= 768 ? 760 : 600;
+            starInterval = setInterval(function() { if (gameActive) spawnStar(); }, spawnDelay);
             gameTimer = setTimeout(endGame, 30000);
         }
 
@@ -2937,23 +3225,27 @@
             var star = document.createElement('div');
             star.className = 'game-star';
             star.textContent = ['⭐', '🌟', '✨'][Math.floor(Math.random() * 3)];
-            star.style.left = Math.random() * 88 + '%';
+            var safeX = Math.max(0, (area.clientWidth || 320) - 48);
+            star.style.left = Math.floor(Math.random() * safeX) + 'px';
             star.style.top = '-30px';
             star.style.fontSize = (Math.random() * 1.4 + 1.4) + 'rem';
             star.style.position = 'absolute';
 
-            star.onclick = function(e) {
-                e.stopPropagation();
-                if (!gameActive) return;
+            function collectStar(e) {
+                if (e) e.stopPropagation();
+                if (!gameActive || star.classList.contains('collected')) return;
                 gameScore++;
                 var scoreEl = document.getElementById('gameScore');
                 if (scoreEl) scoreEl.textContent = gameScore;
-                this.classList.add('collected');
+                star.classList.add('collected');
                 for (var i = 0; i < 3; i++) {
                     setTimeout(function() { createSparkle(star); }, i * 70);
                 }
                 setTimeout(function() { if (star.parentNode) star.remove(); }, 400);
-            };
+            }
+
+            star.addEventListener('pointerdown', collectStar, { passive: true });
+            star.addEventListener('click', collectStar);
 
             area.appendChild(star);
 
@@ -3047,7 +3339,16 @@
                     tile.style.backgroundColor = '#1a2035';
 
                     if (val === idx) tile.classList.add('correct-pos');
+                    tile.setAttribute('tabindex', '0');
+                    tile.setAttribute('role', 'button');
+                    tile.setAttribute('aria-label', 'Move puzzle tile');
                     tile.onclick = function() { moveTile(parseInt(this.dataset.idx)); };
+                    tile.onkeydown = function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            moveTile(parseInt(this.dataset.idx));
+                        }
+                    };
                 }
 
                 board.appendChild(tile);
@@ -3232,7 +3533,7 @@
             if (!audioEl) audioEl = document.getElementById('bgMusic');
             var icon = document.getElementById('musicIcon');
             var text = document.getElementById('musicText');
-            if (!icon || !text) return;
+            if (!icon || !text || !audioEl) return;
 
             musicPlaying = !musicPlaying;
             if (musicPlaying) {
@@ -3250,6 +3551,28 @@
                 text.textContent = 'Our Song';
                 icon.style.animation = 'musicPulse 2s ease-in-out infinite';
             }
+        }
+
+
+        // ============================================================
+        // VIDEO FALLBACK / MOBILE PLAYBACK
+        // ============================================================
+        function initVideo() {
+            var video = document.getElementById('birthdayVideo');
+            var fallback = document.getElementById('videoFallback');
+            if (!video) return;
+
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+
+            function showFallback() {
+                if (fallback) fallback.style.display = 'flex';
+            }
+
+            video.addEventListener('error', showFallback);
+            video.addEventListener('stalled', function() {
+                if (!video.currentSrc) showFallback();
+            });
         }
 
         // ============================================================
@@ -3314,8 +3637,30 @@
         // GALLERY LIGHTBOX
         // ============================================================
         function initGallery() {
+            var carouselWrap = document.querySelector('.carousel-container');
+            var startX = 0;
+            var startY = 0;
+
+            if (carouselWrap) {
+                carouselWrap.addEventListener('pointerdown', function(e) {
+                    startX = e.clientX;
+                    startY = e.clientY;
+                }, { passive: true });
+
+                carouselWrap.addEventListener('pointerup', function(e) {
+                    var dx = e.clientX - startX;
+                    var dy = e.clientY - startY;
+                    if (Math.abs(dx) > 36 && Math.abs(dx) > Math.abs(dy) * 1.25) {
+                        gallerySwipeUntil = Date.now() + 420;
+                        if (dx < 0) nextGallery();
+                        else prevGallery();
+                    }
+                }, { passive: true });
+            }
+
             document.querySelectorAll('.carousel-card').forEach(function(item) {
-                item.addEventListener('click', function() {
+                item.addEventListener('click', function(e) {
+                    if (Date.now() < gallerySwipeUntil || Date.now() < gallerySuppressLightboxUntil) return;
                     var img = this.querySelector('img');
                     var caption = this.querySelector('.gallery-caption');
                     var lb = document.getElementById('lightbox');
@@ -3326,6 +3671,7 @@
                         lbImg.src = img.src;
                         if (lbCap) lbCap.textContent = caption ? caption.textContent : '';
                         lb.style.display = 'flex';
+                        document.body.classList.add('nav-open');
                     }
                 });
             });
@@ -3334,6 +3680,7 @@
         function closeLightbox() {
             var lb = document.getElementById('lightbox');
             if (lb) lb.style.display = 'none';
+            document.body.classList.remove('nav-open');
         }
 
         // ============================================================
@@ -3343,15 +3690,24 @@
         var galleryTotal = 6;
         var galleryStep = 360 / galleryTotal;
 
+        var gallerySuppressLightboxUntil = 0;
+        var gallerySwipeUntil = 0;
+
+        function getCenteredGalleryIndex() {
+            var idx = Math.round((-galleryAngle) / galleryStep) % galleryTotal;
+            return (idx + galleryTotal) % galleryTotal;
+        }
+
         function updateGalleryCarousel() {
             var carousel = document.getElementById('galleryCarousel');
             if (!carousel) return;
             var cards = carousel.querySelectorAll('.carousel-card');
-            var isMobile = window.innerWidth <= 768;
+            var vw = window.innerWidth || 390;
+            var isMobile = vw <= 768;
 
-            var radius = isMobile ? 160 : 300;
-            var cardW = isMobile ? 140 : 280;
-            var cardH = isMobile ? 180 : 360;
+            var radius = isMobile ? Math.max(104, Math.min(142, vw * 0.34)) : 300;
+            var cardW = isMobile ? Math.max(126, Math.min(172, vw * 0.40)) : 280;
+            var cardH = isMobile ? Math.round(cardW * 1.34) : 360;
 
             cards.forEach(function(card, i) {
                 var angle = galleryAngle + (i * galleryStep);
@@ -3361,7 +3717,7 @@
                 var rotateY = -angle;
                 card.style.transform = 'translateX(' + x + 'px) translateZ(' + z + 'px) rotateY(' + rotateY +
                     'deg)';
-                card.style.opacity = z > -100 ? 1 : 0.3;
+                card.style.opacity = z > -100 ? 1 : (isMobile ? 0.18 : 0.3);
                 card.style.zIndex = Math.round(z + radius);
                 card.style.width = cardW + 'px';
                 card.style.height = cardH + 'px';
@@ -3381,8 +3737,12 @@
         }
 
         function rotateGallery(index) {
+            var wasCentered = getCenteredGalleryIndex() === index;
             galleryAngle = -index * galleryStep;
             updateGalleryCarousel();
+            if (window.innerWidth <= 768 && !wasCentered) {
+                gallerySuppressLightboxUntil = Date.now() + 360;
+            }
         }
 
         // ============================================================
@@ -3393,28 +3753,54 @@
             var navLinks = document.querySelector('.nav-links');
             if (!hamburger || !navLinks) return;
 
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('show');
-                var spans = this.querySelectorAll('span');
-                if (navLinks.classList.contains('show')) {
+            hamburger.setAttribute('role', 'button');
+            hamburger.setAttribute('tabindex', '0');
+            hamburger.setAttribute('aria-controls', navLinks.id || 'navLinks');
+            hamburger.setAttribute('aria-label', 'Menu');
+            hamburger.setAttribute('aria-expanded', 'false');
+
+            function setMenu(open) {
+                navLinks.classList.toggle('show', open);
+                document.body.classList.toggle('nav-open', open);
+                hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+                var spans = hamburger.querySelectorAll('span');
+                if (open) {
                     spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
                     spans[1].style.opacity = '0';
                     spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
                 } else {
-                    spans.forEach(function(s) { s.style.transform = 'none';
-                        s.style.opacity = '1'; });
+                    spans.forEach(function(s) {
+                        s.style.transform = 'none';
+                        s.style.opacity = '1';
+                    });
+                }
+            }
+
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                setMenu(!navLinks.classList.contains('show'));
+            });
+
+            hamburger.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setMenu(!navLinks.classList.contains('show'));
                 }
             });
 
-            // Close menu when clicking a link
             navLinks.querySelectorAll('a').forEach(function(a) {
-                a.addEventListener('click', function() {
-                    navLinks.classList.remove('show');
-                    var spans = hamburger.querySelectorAll('span');
-                    spans.forEach(function(s) { s.style.transform = 'none';
-                        s.style.opacity = '1'; });
-                });
+                a.addEventListener('click', function() { setMenu(false); });
             });
+
+            document.addEventListener('click', function(e) {
+                if (navLinks.classList.contains('show') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    setMenu(false);
+                }
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) setMenu(false);
+            }, { passive: true });
         }
 
         // ============================================================
@@ -3468,9 +3854,17 @@
         function initSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(function(a) {
                 a.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var target = document.querySelector(this.getAttribute('href'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    var href = this.getAttribute('href');
+                    if (!href || href === '#') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        return;
+                    }
+                    var target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
                 });
             });
         }
@@ -3484,6 +3878,7 @@
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(function() {
                     updateGalleryCarousel();
+                    renderPuzzle();
                 }, 200);
             });
         }
@@ -3510,6 +3905,7 @@
             try { initCounters(); } catch (e) { console.warn('Counters error:', e.message); }
             try { initQuotes(); } catch (e) { console.warn('Quotes error:', e.message); }
             try { initGallery(); } catch (e) { console.warn('Gallery error:', e.message); }
+            try { initVideo(); } catch (e) { console.warn('Video error:', e.message); }
             try { initSmoothScroll(); } catch (e) { console.warn('SmoothScroll error:', e.message); }
             try { initSparkleClick(); } catch (e) { console.warn('Sparkle error:', e.message); }
             try { initHamburger(); } catch (e) { console.warn('Hamburger error:', e.message); }
@@ -3529,7 +3925,10 @@
 
         // Also update on orientation change
         window.addEventListener('orientationchange', function() {
-            setTimeout(updateGalleryCarousel, 400);
+            setTimeout(function() {
+                updateGalleryCarousel();
+                renderPuzzle();
+            }, 400);
         });
     </script>
 </body>
